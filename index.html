@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizUp — Interactive Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-shell">
+
+        <!-- START SCREEN -->
+        <section class="screen active" id="startScreen">
+
+            <div class="hero-card">
+
+                <div class="logo-mark">EQ</div>
+
+                <span class="eyebrow">
+                    INTERACTIVE QUIZ
+                </span>
+
+                <h1>
+                    Test your <span>knowledge.</span>
+                </h1>
+
+                <p>
+                    Jawab pertanyaan, kumpulkan poin,
+                    dan lihat seberapa tinggi skor yang bisa kamu dapatkan.
+                </p>
+
+                <div class="quiz-info">
+
+                    <div>
+                        <strong>10</strong>
+                        <small>Questions</small>
+                    </div>
+
+                    <div>
+                        <strong>15s</strong>
+                        <small>Per Question</small>
+                    </div>
+
+                    <div>
+                        <strong>+100</strong>
+                        <small>Max Points</small>
+                    </div>
+
+                </div>
+
+                <button class="primary-btn" id="startBtn">
+                    Start Quiz <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUIZ SCREEN -->
+        <section class="screen" id="quizScreen">
+
+            <header class="quiz-header">
+
+                <div>
+                    <div class="mini-brand">
+                        QUIZ<span>UP</span>
+                    </div>
+
+                    <p id="questionCounter">
+                        Question 1 of 10
+                    </p>
+                </div>
+
+                <div class="score-box">
+                    <span>Score</span>
+                    <strong id="score">0</strong>
+                </div>
+
+            </header>
+
+
+            <div class="progress-track">
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+            </div>
+
+
+            <div class="quiz-content">
+
+                <div class="question-meta">
+
+                    <span id="category">
+                        Technology
+                    </span>
+
+                    <div class="timer">
+
+                        <span class="timer-icon">
+                            ◷
+                        </span>
+
+                        <strong id="timer">
+                            15
+                        </strong>
+
+                        s
+
+                    </div>
+
+                </div>
+
+
+                <h2 id="questionText">
+                    Question goes here?
+                </h2>
+
+
+                <div
+                    class="answers"
+                    id="answers"
+                ></div>
+
+
+                <div class="quiz-footer">
+
+                    <span id="feedback"></span>
+
+                    <button
+                        class="next-btn"
+                        id="nextBtn"
+                        disabled
+                    >
+                        Next <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT SCREEN -->
+        <section class="screen" id="resultScreen">
+
+            <div class="result-card">
+
+                <div
+                    class="result-icon"
+                    id="resultIcon"
+                >
+                    🏆
+                </div>
+
+                <span class="eyebrow">
+                    QUIZ COMPLETE
+                </span>
+
+                <h1 id="resultTitle">
+                    Amazing!
+                </h1>
+
+                <p id="resultMessage">
+                    Great job. Here's your final result.
+                </p>
+
+
+                <div class="final-score">
+
+                    <span>
+                        Your Score
+                    </span>
+
+                    <strong id="finalScore">
+                        0
+                    </strong>
+
+                    <small>
+                        / 1000
+                    </small>
+
+                </div>
+
+
+                <div class="stats">
+
+                    <div>
+                        <strong id="correctCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Correct
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong id="wrongCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Wrong
+                        </span>
+                    </div>
+
+                    <div>
+                        <strong id="accuracy">
+                            0%
+                        </strong>
+
+                        <span>
+                            Accuracy
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="restartBtn"
+                >
+                    Play Again <span>↻</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
